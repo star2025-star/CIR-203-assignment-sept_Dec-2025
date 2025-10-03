@@ -1,0 +1,29 @@
+# 1. Create a tuple for a patient
+patient = ("John Doe", 45, "120/80", 72)
+print("Patient tuple:", patient)
+
+# 2. Access and print age and heart rate
+print("Age:", patient[1])
+print("Heart Rate:", patient[3])
+
+# 3. Why tuples are suitable?
+# Tuples are immutable, meaning once created, data cannot be changed.
+# This ensures patient vitals remain consistent and secure.
+
+# 4. Convert to list, update heart rate, and back to tuple
+patient_list = list(patient)
+patient_list[3] = 75   # updated heart rate
+patient = tuple(patient_list)
+print("\nUpdated patient tuple:", patient)
+
+# 5. Tuple of 5 patients and extract names
+patients = (
+    ("John Doe", 45, "120/80", 72),
+    ("Jane Smith", 30, "110/70", 65),
+    ("Paul Kim", 55, "130/85", 78),
+    ("Mary Ann", 40, "125/80", 70),
+    ("Peter Lee", 60, "140/90", 82)
+)
+
+names = [p[0] for p in patients]
+print("\nPatient names:", names)

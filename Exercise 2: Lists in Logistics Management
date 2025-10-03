@@ -1,0 +1,24 @@
+# 1. Create a list of 10 delivery routes
+routes = ["Nairobi-Westlands", "Nakuru-CBD", "Naivasha-Industrial",
+          "Mombasa-North", "Nyeri-South", "Kisumu-East", 
+          "Kericho-Central", "Narok-West", "Nanyuki-North", "Embu-CBD"]
+print("Routes:", routes)
+
+# 2. Append new route and remove discontinued one
+routes.append("Thika-South")
+routes.remove("Embu-CBD")
+print("\nUpdated Routes:", routes)
+
+# 3. Sort alphabetically and then reverse
+routes.sort()
+print("\nSorted routes:", routes)
+routes.reverse()
+print("Reversed routes:", routes)
+
+# 4. Count routes starting with "N"
+count_N = sum(1 for r in routes if r.startswith("N"))
+print("\nRoutes starting with 'N':", count_N)
+
+# 5. List comprehension: routes longer than 10 characters
+long_routes = [r for r in routes if len(r) > 10]
+print("Routes longer than 10 characters:", long_routes)

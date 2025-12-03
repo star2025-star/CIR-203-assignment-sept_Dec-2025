@@ -1,0 +1,31 @@
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+    def insert(self, data):
+        new_node = Node(data)
+        self.head = new_node
+
+    def display(self):
+        current = self.head
+        while current:
+            print(current.data)
+            current = current.next
+
+student_list = LinkedList()
+
+student_list.insert({
+    "name": "John Doe",
+    "admission_number": "ADM123",
+    "grades": {
+        "CIS 221": "A",
+        "CIT 211": "C",
+        "CIM 207": "B"
+    }
+})
+
+student_list.display()
